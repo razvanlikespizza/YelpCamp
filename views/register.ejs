@@ -1,0 +1,21 @@
+<% include partials/header %>
+<div class="container auth-form">
+  <h1 class="title is-dark">Sign Up</h1>
+  <form action="/register" method="POST">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" type="text" name="username" placeholder="your username" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input" type="password" name="password" placeholder="your password" required>
+      </div>
+    </div>
+    <button class="button is-primary">Register</button>
+  </form>
+</div>
+
+<% include partials/footer %>

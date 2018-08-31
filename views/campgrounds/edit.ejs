@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<div class="campground-new-container">
+  <nav class="panel campground-new-panel">
+    <h1 class="panel-heading"> Edit <strong><%= campground.name %></strong></h1>
+    <div class="panel-block">
+      <form class="campground-new-form" method="POST" action="/campgrounds/<%= campground._id %>?_method=PUT">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" name="campground[name]" value="<%= campground.name %>" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Image URL</label>
+          <div class="control">
+            <input class="input" type="text" name="campground[img]" value="<%= campground.img %>" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Price $</label>
+          <div class="control">
+            <input class="input" type="text" name="campground[price]" placeholder="Your price goes here" value="<%= campground.price %>" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <input class="input" type="text" name="campground[description]" value="<%= campground.description %>" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <a href="../" class="button">Back <span class="fa fa-arrow-left"></span></a>
+          <button class="button is-success">Update</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<% include ../partials/footer %>

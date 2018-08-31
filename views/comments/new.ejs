@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<div class="campground-new-container">
+  <nav class="panel campground-new-panel">
+    <h1 class="panel-heading"> Add a new comment to <strong><%= campground.name %></strong></h1>
+    <div class="panel-block">
+      <form class="campground-new-form" method="POST" action="/campgrounds/<%= campground._id %>/comments">
+        <div class="field">
+          <label class="label">Text</label>
+          <div class="control">
+            <textarea name="comment[text]" class="textarea" placeholder="Your comment" required></textarea>
+          </div>
+        </div>
+        <a href="../" class="button">Back <span class="fa fa-arrow-left"></span></a>
+        <button class="button is-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<% include ../partials/footer %>

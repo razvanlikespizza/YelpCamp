@@ -1,0 +1,111 @@
+/* global */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* GLOBAL HEADER */
+.nav_button {
+  margin: 0 10px;
+}
+/* CAMPGROUNDS PAGE */
+.campground {
+  margin: 2.5% auto;
+  padding: 0 2.5%;
+  max-width: 800px;
+}
+.campground-card {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.campgrounds__button {
+  margin: 5px 0;
+}
+
+/* CAMPGROUNDS NEW */
+.campground-new-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+.campground-new-panel {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  background: white;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .campground-new-panel {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+  }
+}
+
+/* COMMENT  */
+.comments {
+  margin: 15px;
+}
+.media {
+  border: 3px solid rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* CAMPGROUNDS SHOW */
+/* .campground-show-panel,
+.campground-show-tile {
+  display: inline-block;
+}
+.campground-show-panel {
+  width: 20%;
+}
+.campground-show-tile {
+  width: 70%;
+} */
+@media screen and (min-width: 768px) {
+  .campground-show-container {
+    display: flex;
+  }
+  .campground-show-panel {
+    margin-top: 12px;
+    flex: 1;
+  }
+  .campground-show-tile {
+    flex: 3;
+  }  
+}
+.tile-top-text {
+  display: flex;
+  justify-content: space-between;
+}
+/* MESSAGE NOTIFICATION */
+.message {
+  margin: 15px;
+}
+/* LANDING PAGE */
+.landing-page {
+  background: linear-gradient(rgba(57, 56, 59, 0.95), rgba(95, 91, 60, 0.95)), url("https://images.pexels.com/photos/783678/pexels-photo-783678.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-size: cover;
+}
+.landing-page .title {
+  font-size: 10vw;
+  color: white;
+}
+.landing-page .button {
+  font-size: 2vw;
+}
+
+/* AUTHENTICATION */
+.auth-form {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}

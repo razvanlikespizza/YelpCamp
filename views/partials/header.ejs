@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> YelpCamp Project </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/bulma.css"></link>
+    <link rel="stylesheet" href="/stylesheets/style.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  </head>
+  <body>
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <h1 class="title">YelpCamp </h1>
+        </a>
+        <button class="navbar-burger burger button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+          <% if (!currentUser) { %>
+            <a href="/login" class="tag is-light has-margin nav_button">Log In</a>
+            <a href="/register"><button class="button is-success nav_button">Sign Up</button></a>
+          <% } else { %>
+            <span class="is-primary">Signed as <strong><%= currentUser.username %></strong></span>
+            <a href="/logout"><button class="button is-danger nav_button">Log Out</button></a>
+          <% } %>
+          </div>
+        </div>
+      </div>
+  </nav>
+  <div class="container">
+    <% if (error && error.length > 0) { %>
+      <article class="message is-danger">
+      <div class="message-header">
+        <p>Info</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        <%= error %>
+      </div>
+    <% } %>
+    <% if (success && success.length > 0) { %>
+    </article>
+        <article class="message is-success">
+    <div class="message-header">
+      <p>Info</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+      <%= success %>
+    </div>
+    </article>
+    <% } %>
+  </div>
