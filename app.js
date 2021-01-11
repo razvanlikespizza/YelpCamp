@@ -9,12 +9,17 @@ const express = require("express"),
       User = require("./models/user"),
       methodOverride = require("method-override"),
       flash = require("connect-flash"),
-      SeedDB = require("./seeds");
-
+      SeedDB = require("./seeds"),
+      config = require("./config");
 const commentRoutes = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
-mongoose.connect("mongodb://localhost/yelpcamp", {useMongoClient: true});
+
+
+mongoose.connect(config.mongoString, {useNewUrlParser: true, useUnifiedTopology: true});
+
+
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
