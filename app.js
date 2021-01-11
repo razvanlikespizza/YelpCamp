@@ -16,7 +16,7 @@ const commentRoutes = require("./routes/comments"),
       indexRoutes = require("./routes/index");
 
 
-mongoose.connect(config.mongoString, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DBSTRING, {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
